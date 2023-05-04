@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/MainFrameLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <!-- ========================== user fab ========================================= -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/UserOption"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        />
+
+    <!-- ============================== open fab ======================================= -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/UserOption"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        />
+
+    <!-- =============================== view.show/hide fabs ====================================== -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/RadiusFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fab_open"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/fab_open"
+        app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_open"
+        app:layout_constraintEnd_toEndOf="@+id/fab_open"
+        app:layout_constraintStart_toStartOf="@+id/fab_open"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/test_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/RadiusFrame"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toStartOf="@+id/fab_open"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_open"
+        app:layout_constraintEnd_toEndOf="@+id/fab_open"
+        app:layout_constraintStart_toStartOf="@+id/fab_open"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/test_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/RadiusFrame"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_open"
+        app:layout_constraintEnd_toEndOf="@+id/fab_open"
+        app:layout_constraintStart_toStartOf="@+id/fab_open"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        />
+
+    <!-- dont work, as i want, fuck -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/CurrentPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/test_3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_baseline_gps_fixed_24"
+        app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        />
+
+
+
+
+    <!-- ========================== Test =========================================== -->
+
+    <RelativeLayout
+        android:id="@+id/RadiusFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_layout"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        >
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/seekBar"
+            android:layout_alignTop="@+id/CloseRadiusFrame"
+            android:layout_alignBottom="@+id/CloseRadiusFrame"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:textSize="32sp"
+            android:text="@string/input_radius"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/CloseRadiusFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_close_24"
+            app:fabSize="mini"
+            app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+            />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CloseRadiusFrame"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:max="10"
+            android:progress="3"
+            />
+    </RelativeLayout>
+
+    <!-- ============================= frame input andress ======================================= -->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Destination"
+        android:layout_alignTop="@+id/UserOption"
+        android:layout_alignBottom="@+id/UserOption"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/UserOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_destination"
+            android:background="@drawable/round_input_layout"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- =========================== fragment-frame =========================== -->
+
+    <RelativeLayout
+        android:id="@+id/FrameUserLog"
+        android:name="com.example.nzse.UserLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/round_layout"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        >
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/FragmentUserLog"
+            android:name="com.example.nzse.UserLog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/round_layout" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/CloseUserLogFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_close_24"
+            app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+            app:fabSize="mini"
+            />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/toFavList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/btn_star" />
+
+    </RelativeLayout>
+
+    <!-- ====================================== registration =================================== -->
+
+    <RelativeLayout
+        android:id="@+id/RegistrationFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="220dp"
+        android:background="@drawable/round_layout"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"
+        >
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/FragmentRegistration"
+            android:name="com.example.nzse.Registration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_layout" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/CloseRegistrationFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_close_24"
+            app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+            app:fabSize="mini"
+            />
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
